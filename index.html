@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+</head>
+<body>
+    <main class="main-container">
+        <!-- Search Bar -->
+        <header class="input-container">
+            <input id="city" class="city-input" placeholder="Enter City" type="text">
+            <button class="search-btn" onclick="getWeather()">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            
+        </header>
+
+        <!-- Weather Info -->
+        <section class="weather-display">
+            <h2 id="city-name">City, Country</h2>
+            <img id="weather-icon" src="" alt="Weather Icon" class="weather-icon" style="display:none;">
+            <div id="temp-div" class="temperature">--°C</div>
+            <div class="weather-info">
+                <p id="weather-condition" class="info-text">🌞 How's the weather today?</p>
+                <p id="humidity" class="info-text">💧 Feeling the humidity? Let us know!</p>
+                <p id="wind-speed" class="info-text"> How's the wind today?</p>
+            </div>
+            
+        </section>
+
+        <!-- Hourly Forecast -->
+        <section id="hourly-forecast" class="hourly-container">
+            <h3>Hourly Forecast</h3>
+            <div class="hourly-items"></div>
+        </section>
+
+       
+
+        <div id="error-message" class="error-message" style="display: none;">City not found. Please try again.</div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
